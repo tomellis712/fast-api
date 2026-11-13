@@ -1,17 +1,17 @@
-# Portfolio FastAPI Task API
+# Task Management API
 
-A clean, portfolio-ready REST API built with **FastAPI, SQLModel, Pydantic, SQLite, Docker, and Pytest**.
+A professional, production-oriented REST API for managing tasks, built with **FastAPI, SQLModel, Pydantic, SQLite, Docker, and Pytest**. The application is structured to support portfolio presentation, internal tooling, and extension into larger service-driven workflows.
 
 ## Features
 
-- RESTful CRUD API
-- Pydantic request/response validation
-- SQLModel database layer
-- Dependency injection with FastAPI
-- HTTP error handling
-- Health-check endpoint
-- Automated API test
-- Docker support
+- RESTful CRUD operations for task management
+- Pydantic-based request and response validation
+- SQLModel integration for database modeling
+- FastAPI dependency injection for clean service composition
+- Consistent HTTP error handling
+- Health-check endpoint for monitoring
+- Automated API testing
+- Dockerized deployment support
 - Interactive Swagger/OpenAPI documentation
 
 ## Project structure
@@ -30,7 +30,7 @@ docker-compose.yml
 requirements.txt
 ```
 
-## Run locally
+## Local development
 
 ```bash
 python -m venv .venv
@@ -42,12 +42,12 @@ python -m app.db.init_db
 uvicorn app.main:app --reload
 ```
 
-Open:
+Access the service at:
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
-- Health: http://127.0.0.1:8000/health
+- Health check: http://127.0.0.1:8000/health
 
-## Run tests
+## Testing
 
 ```bash
 pytest
@@ -59,7 +59,7 @@ pytest
 docker compose up --build
 ```
 
-## Example API
+## Example request
 
 Create a task:
 
@@ -68,10 +68,10 @@ POST /api/v1/tasks
 Content-Type: application/json
 
 {
-  "title": "Build FastAPI portfolio",
-  "description": "Create a production-style API",
+  "title": "Implement reporting workflow",
+  "description": "Define the workflow for operational reporting and review",
   "completed": false
 }
 ```
 
-This project is intentionally structured as a portfolio starter. For a production deployment, add PostgreSQL, Alembic migrations, JWT/OAuth2 authentication, rate limiting, structured logging, CI/CD, and environment-specific secrets.
+This project is intentionally structured as a clean foundation for a production-ready service. For a full deployment, consider PostgreSQL, Alembic migrations, JWT or OAuth2 authentication, rate limiting, structured logging, CI/CD workflows, and environment-specific secret management.
