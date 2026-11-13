@@ -5,7 +5,7 @@ from app.core.config import settings
 app = FastAPI(
     title=settings.PROJECT_NAME,
     version="1.0.0",
-    description="Portfolio-ready production-style FastAPI REST API.",
+    description="Production-ready task management API built with FastAPI for portfolio, internal tooling, and service integration use cases.",
 )
 
 app.include_router(router, prefix="/api/v1")
